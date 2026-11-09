@@ -286,3 +286,9 @@ body{font-size:17px}
 .weather-day strong,.weather-day span{font-size:12px}
 .weather-day small{font-size:11px}
 @media(max-width:390px){body{font-size:16px}.page-head h1{font-size:25px}.subtitle{font-size:14px}.footnote{font-size:11px}}
+
+.evidence-preview{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:6px}.evidence-preview:empty{display:none}.evidence-preview img{display:block;width:64px;height:64px;object-fit:cover;border:1px solid var(--line);border-radius:10px}.evidence-remove{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink2)}.evidence-large{display:block;max-width:100%;max-height:70vh;margin:0 auto 14px;object-fit:contain;border-radius:12px}.evidence-link{padding:2px 5px;font-size:14px;vertical-align:middle}
+
+#modal .form-grid>.debtor-name-field{grid-column:1!important}#modal .form-grid>.debtor-evidence-field{grid-column:2!important}
+
+#modal .form-grid>.debt-rate-field{grid-column:1!important}#modal .form-grid>.debt-principal-field{grid-column:2!important}#modal .form-grid>.debt-start-field{grid-column:1!important}#modal .form-grid>.debt-due-field{grid-column:2!important}
