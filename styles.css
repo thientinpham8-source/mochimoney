@@ -292,3 +292,5 @@ body{font-size:17px}
 #modal .form-grid>.debtor-name-field{grid-column:1!important}#modal .form-grid>.debtor-evidence-field{grid-column:2!important}
 
 #modal .form-grid>.debt-rate-field{grid-column:1!important}#modal .form-grid>.debt-principal-field{grid-column:2!important}#modal .form-grid>.debt-start-field{grid-column:1!important}#modal .form-grid>.debt-due-field{grid-column:2!important}
+
+#modal .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#modal .form-grid>.field{min-width:0}#modal .form-grid>.field input,#modal .form-grid>.field select,#modal .form-grid>.field textarea{min-width:0;max-width:100%}
