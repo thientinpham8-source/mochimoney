@@ -7,8 +7,7 @@ button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;bo
 .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(145deg,#ffd3e2,#ff9dbe);display:grid;place-items:center;box-shadow:0 4px 10px rgba(247,107,156,.3);font-size:19px;color:#fff}
 .brand span em{font-style:normal;color:var(--pink)}
 .brand-owner{flex:0 0 calc(100% - 47px);width:calc(100% - 47px);min-width:0;font-size:13px;font-weight:700;line-height:1.25;color:var(--pink-deep);background:var(--pink-soft);padding:4px 11px;border-radius:99px;margin:-3px 0 0 47px;border:1px solid #ffd4e2;white-space:nowrap;overflow:hidden;font-family:"Baloo 2",ui-rounded,sans-serif;animation:owner-marquee 14s linear infinite}
-@keyframes owner-marquee{0%,12%{text-indent:100%}88%,100%{text-indent:-100%}}
-.top-actions{display:flex;align-items:center;gap:8px}
+@keyframes owner-marquee{0%,12%{text-indent:100%}88%,100%{text-indent:-100%}}.top-actions{display:flex;align-items:center;gap:8px}
 .today-pill{display:none}
 .icon-btn{width:38px;height:38px;border-radius:50%;background:var(--card);border:1px solid var(--line);box-shadow:0 2px 8px rgba(93,64,55,.06);font-size:17px;position:relative}
 .icon-btn .dot{position:absolute;width:9px;height:9px;background:var(--red);border-radius:50%;top:4px;right:4px;border:2px solid var(--card)}
@@ -130,6 +129,23 @@ td:nth-child(1){grid-area:1/2}td:nth-child(2){grid-area:1/1;font-weight:600;font
 .calendar-tile strong{font-size:18px;line-height:1}.calendar-tile small{font-size:9px;text-transform:uppercase}
 .big-reminder .rem-info{flex:1;min-width:0}.big-reminder .rem-info strong{font-size:13px}
 .big-reminder .rem-info p{margin:3px 0 0;color:var(--ink2);font-size:11px}
+/* Reminder card: keep the message readable and place actions on their own row. */
+.big-reminder{display:grid;grid-template-columns:48px minmax(0,1fr);gap:10px 12px;align-items:center;min-width:0}
+.big-reminder>.calendar-tile{grid-column:1;grid-row:1;width:48px;flex:none}
+.big-reminder>.rem-info{grid-column:2;grid-row:1;min-width:0}
+.big-reminder .rem-info strong{display:block;line-height:1.35;overflow-wrap:anywhere}
+.big-reminder .rem-info p{line-height:1.45;overflow-wrap:anywhere}
+.big-reminder>.mini-btn{grid-row:2;min-width:0;white-space:normal;line-height:1.25;padding:8px 7px;font-size:11px}
+.big-reminder>.mini-btn:nth-of-type(1){grid-column:1}
+.big-reminder>.mini-btn:nth-of-type(2){grid-column:2}
+@media(min-width:600px){.big-reminder{grid-template-columns:48px minmax(0,1fr) auto auto}.big-reminder>.mini-btn{grid-row:1;white-space:nowrap;padding:7px 10px}.big-reminder>.mini-btn:nth-of-type(1){grid-column:3}.big-reminder>.mini-btn:nth-of-type(2){grid-column:4}}
+.big-reminder>.reminder-copy-btn{grid-column:2;grid-row:2;justify-self:end;display:grid;place-items:center;width:38px;height:38px;padding:8px;border-radius:12px}
+.reminder-copy-btn svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.reminder-template-list{display:grid;gap:10px}
+.reminder-template{display:grid;gap:6px;width:100%;padding:12px;text-align:left;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);cursor:pointer}
+.reminder-template-title{display:flex;align-items:center;justify-content:space-between;color:var(--pink-deep);font-size:13px;font-weight:700}
+.reminder-template-title svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.reminder-template>span:last-child{font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 .settings-box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow);margin-bottom:12px}
 .settings-box h3{font-size:15px;margin:0 0 5px;font-weight:700}
 .settings-box p{font-size:12px;color:var(--ink2);margin:0 0 12px}
@@ -222,7 +238,7 @@ body{background-color:var(--bg);background-image:radial-gradient(#f6a7cb26 1.5px
 .app{position:relative}.card,.debt-card,.settings-box,.big-reminder,.report-filter,.stat-card,.summary-chip,tr,.icon-btn,.search input,.toolbar .filter-select,.field input,.field select,.field textarea,.report-filter input,.modal,.mobile-nav{background-color:var(--card);border-color:var(--line);color:var(--ink)}
 .card,.debt-card,.settings-box,.big-reminder,.report-filter,.stat-card,.summary-chip,tr{box-shadow:0 3px 0 #f5dfeb,0 8px 20px rgba(180,92,135,.09)}
 .balance-card{background:linear-gradient(135deg,#ffb2d0,#f779ad 58%,#e7659c);box-shadow:0 5px 0 #e6a0bc,0 10px 22px rgba(218,96,148,.22)}.balance-card:after{opacity:.23}.mascot{background:#fff;border-color:#ffe2ee}
-.brand-owner{background:#ffe5f0;border-color:#f9c7dc;color:#d94e86}
+.brand-owner{font-size:14px}
 .debt-row,.debt-main,.reminder-item,.mini-btn,.seg,.calendar-tile{background:#fff2f8;color:var(--ink);border-color:var(--line)}
 .seg-btn{color:var(--ink2)}.seg-btn.active{background:#fff;color:var(--pink-deep);box-shadow:0 2px 0 #f5d5e4}
 .mobile-nav{background:#fffafdF2;box-shadow:0 4px 0 #f2dce8,0 10px 24px rgba(180,92,135,.16)}
