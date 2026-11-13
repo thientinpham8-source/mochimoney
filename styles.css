@@ -335,3 +335,101 @@ body{font-size:17px}
 #modal .evidence-thumb{display:block;width:48px;height:48px;padding:0;border:0;border-radius:13px;background:transparent;cursor:zoom-in}
 #modal .evidence-thumb img{display:block;width:100%;height:100%;object-fit:cover;border:1px solid var(--line);border-radius:10px}
 @media(max-width:359px){#modal .form-grid{grid-template-columns:minmax(0,1fr)}#modal .form-grid>.debtor-name-field,#modal .form-grid>.debtor-evidence-field,#modal .form-grid>.debt-rate-field,#modal .form-grid>.debt-principal-field,#modal .form-grid>.debt-start-field,#modal .form-grid>.debt-due-field{grid-column:1!important}#modal .form-grid>.debtor-name-field{grid-row:auto}#modal .form-grid>.debtor-evidence-field{grid-row:auto}#modal .form-grid>.debt-rate-field{grid-row:auto}#modal .form-grid>.debt-principal-field{grid-row:auto}#modal .form-grid>.debt-start-field{grid-row:auto}#modal .form-grid>.debt-due-field{grid-row:auto}}
+
+/* ── Weather FX canvas overlay ─────────────────────────────── */
+#page-weather{position:relative;overflow:hidden}
+#weatherFxCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+#page-weather .weather-card,#page-weather .weather-current,#page-weather .weather-forecast,
+#page-weather .weather-search,#page-weather .card-head,#page-weather .page-head,
+#page-weather .footnote{position:relative;z-index:3}
+
+/* ── Calendar Day Countdown & Badges ──────────────────────── */
+.calendar-selected-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.calendar-selected-head h3{margin:0;font-size:14px;flex:1;min-width:0}
+.calendar-countdown-badge{display:inline-flex;align-items:center;justify-content:center;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:700;line-height:1;white-space:nowrap;flex-shrink:0;letter-spacing:0.2px}
+.calendar-countdown-badge.is-today{background:#e6f4eb;color:#237848;border:1px solid rgba(111,191,143,.45)}
+.calendar-countdown-badge.is-tomorrow{background:#fdf3dd;color:#9e6a12;border:1px solid rgba(246,194,94,.5)}
+.calendar-countdown-badge.is-future{background:#ffe7ef;color:#d83c74;border:1px solid rgba(247,107,156,.3)}
+.calendar-countdown-badge.is-past{background:#f0ece8;color:#7a6d63;border:1px solid rgba(133,119,107,.25)}
+
+.countdown-highlight{color:var(--pink-deep);font-weight:700}
+.calendar-day-distance{margin-top:5px;font-size:12px;color:var(--ink2)}
+.calendar-day-distance b{color:var(--pink-deep);font-weight:700}
+.calendar-next-hint{margin-top:8px;padding:8px 10px;background:#fff8ee;border-radius:10px;border:1px solid #f9e2c2;font-size:12px;color:var(--boba);line-height:1.4}
+.calendar-next-hint .highlight-diff{color:var(--pink-deep);font-weight:700}
+.calendar-upcoming-item{cursor:pointer;transition:transform .15s ease,background .15s ease}
+.calendar-upcoming-item:hover{background:#ffeaf3;transform:translateY(-1px)}
+
+/* ── Calendar Daily Taboo & Auspicious Box ─────────────────── */
+.calendar-taboo-box{margin:10px 0 12px;padding:12px;background:#fffaf3;border:1px solid #f6e4d0;border-radius:14px;display:grid;gap:9px}
+.calendar-taboo-header{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.calendar-taboo-dayinfo{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.taboo-canchi{font-size:13px;font-weight:800;color:var(--boba)}
+.taboo-spirit-tag{display:inline-flex;align-items:center;padding:3px 7px;border-radius:999px;font-size:11px;font-weight:700}
+.taboo-spirit-tag.is-good{background:#e8f7ee;color:#207544;border:1px solid rgba(111,191,143,.4)}
+.taboo-spirit-tag.is-caution{background:#fdf0e2;color:#a35914;border:1px solid rgba(201,143,95,.4)}
+.taboo-warning-tag{display:inline-flex;align-items:center;padding:3px 7px;border-radius:999px;font-size:11px;font-weight:700;background:#ffebee;color:#c92a42;border:1px solid rgba(226,84,106,.35)}
+.taboo-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media(max-width:340px){.taboo-body{grid-template-columns:1fr}}
+.taboo-col{padding:9px 10px;border-radius:11px;font-size:12px;line-height:1.4}
+.taboo-col.taboo-good{background:#f0faf3;border:1px solid #d7f1e0}
+.taboo-col.taboo-bad{background:#fff3f5;border:1px solid #fedfe4}
+.taboo-col-title{font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.taboo-good .taboo-col-title{color:#207544}
+.taboo-bad .taboo-col-title{color:#be2040}
+.taboo-col-desc{font-size:11.5px;color:var(--ink)}
+.taboo-hours{padding-top:7px;border-top:1px dashed #eedccb;font-size:11px;color:var(--ink2);line-height:1.4}
+.taboo-hours strong{color:var(--boba)}
+
+/* ── Lottery Section ───────────────────────────────────────── */
+.lottery-card{margin-top:12px}
+.lottery-loading{padding:18px 0;text-align:center;font-size:13px;color:var(--ink2)}
+.lottery-main-highlight{display:flex;flex-direction:column;gap:10px}
+.lottery-special-box{background:linear-gradient(135deg,#fff0f5 0%,#ffe5ee 100%);border:1.5px solid #ffccd9;border-radius:18px;padding:14px 12px;text-align:center;box-shadow:0 4px 14px rgba(247,107,156,.1)}
+.lottery-box-label{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--pink-deep)}
+.lottery-special-number{font-size:clamp(30px,8vw,38px);font-weight:900;letter-spacing:5px;color:#d6336c;line-height:1.2;margin:4px 0}
+.lottery-sub-meta{font-size:12px;color:var(--ink2)}
+.lottery-loto-pill{display:inline-block;background:#ff4785;color:#fff;padding:2px 8px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:1px}
+.lottery-quick-prizes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lottery-quick-item{background:#fffaf5;border:1px solid var(--line);border-radius:12px;padding:8px 10px;text-align:center}
+.lq-label{font-size:11px;color:var(--ink2);display:block;margin-bottom:2px}
+.lq-num{font-size:13.5px;color:var(--boba);font-weight:800;letter-spacing:1px}
+.lottery-toggle-btn{width:100%;margin-top:10px;padding:9px 12px;background:var(--pink-soft);color:var(--pink-deep);border:1px dashed rgba(247,107,156,.4);border-radius:12px;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s}
+.lottery-toggle-btn:hover{background:#fedce7}
+.lottery-full-table{margin-top:10px;display:grid;gap:6px}
+.lottery-row{display:flex;align-items:center;padding:7px 10px;background:#fffdfa;border-radius:10px;border:1px solid #f6eee4;font-size:12px}
+.lr-name{min-width:68px;font-weight:800;color:var(--ink2);font-size:11px}
+.lr-nums{flex:1;display:flex;flex-wrap:wrap;gap:6px}
+.lottery-num-badge{display:inline-block;padding:3px 7px;background:#fff;border:1px solid #eedecf;border-radius:7px;font-size:12px;font-weight:700;color:var(--ink);letter-spacing:0.8px}
+.lottery-num-badge.special-b{background:#fff3f6;border-color:#fec9d6;color:var(--pink-deep)}
+
+/* Lottery Tabs */
+.lottery-tabs{display:flex;gap:6px;background:var(--bg2);padding:4px;border-radius:12px;margin:10px 0 12px}
+.lottery-tab-btn{flex:1;padding:8px 12px;border:0;border-radius:9px;background:none;color:var(--ink2);font-size:12.5px;font-weight:700;cursor:pointer;transition:all .2s;text-align:center}
+.lottery-tab-btn.active{background:var(--card);color:var(--pink-deep);box-shadow:0 1px 4px rgba(93,64,55,.08)}
+
+/* Lottery MN Filters */
+.lottery-mn-filters{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:8px}
+@media(max-width:360px){.lottery-mn-filters{grid-template-columns:1fr}}
+.lottery-mn-stations-today{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:11px;font-size:11.5px}
+.lottery-mn-stations-today-label{color:var(--ink2);font-weight:700;font-size:11.5px;margin-right:2px}
+.lottery-station-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;background:#fff5e6;color:#a05d15;border:1px solid #fed8a7;cursor:pointer;font-size:11.5px;font-weight:700;transition:all .15s}
+.lottery-station-chip:hover,.lottery-station-chip.selected{background:var(--pink-soft);color:var(--pink-deep);border-color:var(--pink)}
+
+/* Lottery MN Info Card */
+.lottery-mn-card{background:linear-gradient(135deg,#fff8fa 0%,#fff0f4 100%);border:1.5px solid #fedfe7;border-radius:16px;padding:14px;display:grid;gap:10px}
+.lottery-mn-title{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.lottery-mn-station-name{font-size:16px;font-weight:800;color:var(--boba)}
+.lottery-mn-time-tag{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#e6f4eb;color:#2a7e4e}
+.lottery-mn-time-tag.is-waiting{background:#fdf3dd;color:#a06a15}
+.lottery-mn-desc{font-size:12px;color:var(--ink2);line-height:1.45}
+
+/* Lottery Checker / Ticket lookup */
+.lottery-check-box{background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 12px;margin-top:4px}
+.lcb-title{font-size:12px;font-weight:800;color:var(--ink);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.lcb-row{display:flex;gap:7px}
+.lcb-row input{flex:1;min-width:0;padding:8px 10px;font-size:13px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
+.lcb-row button{flex-shrink:0;padding:8px 14px;font-size:12px;border-radius:10px}
+.lottery-check-result{margin-top:7px;font-size:12px;line-height:1.4}
+.lottery-view-online-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:6px;padding:10px 12px;background:#fff;border:1.5px solid var(--pink);color:var(--pink-deep);border-radius:12px;font-size:12.5px;font-weight:700;text-decoration:none;transition:all .18s;box-sizing:border-box}
+.lottery-view-online-btn:hover{background:var(--pink-soft)}
