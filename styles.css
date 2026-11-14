@@ -431,5 +431,7 @@ body{font-size:17px}
 .lcb-row input{flex:1;min-width:0;padding:8px 10px;font-size:13px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
 .lcb-row button{flex-shrink:0;padding:8px 14px;font-size:12px;border-radius:10px}
 .lottery-check-result{margin-top:7px;font-size:12px;line-height:1.4}
-.lottery-view-online-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:6px;padding:10px 12px;background:#fff;border:1.5px solid var(--pink);color:var(--pink-deep);border-radius:12px;font-size:12.5px;font-weight:700;text-decoration:none;transition:all .18s;box-sizing:border-box}
-.lottery-view-online-btn:hover{background:var(--pink-soft)}
+.lottery-quick-prizes.three-col{grid-template-columns:repeat(3,1fr)}
+@media(max-width:380px){.lottery-quick-prizes.three-col{grid-template-columns:1fr}}
+.lottery-win-box{background:linear-gradient(135deg,#eafbf0 0%,#d4f6df 100%);border:1.5px solid #82e0aa;border-radius:12px;padding:10px 12px;margin-top:8px;color:#1e7e34;font-size:12.5px;line-height:1.45}
+.lottery-miss-box{background:#fff9f0;border:1px solid #fed8a7;border-radius:12px;padding:10px 12px;margin-top:8px;color:var(--ink2);font-size:12px;line-height:1.4}

@@ -134,7 +134,7 @@
                         <div>
                             <div class="eyebrow">Cập nhật tự động ☁️</div>
                             <h1>Giá vàng & tỷ giá</h1>
-                            <p class="subtitle">Giá SJC quy đổi theo lượng · Tỷ giá USD/VND · Kết quả XSMB</p>
+                            <p class="subtitle">Giá SJC quy đổi theo lượng · Tỷ giá USD/VND · Kết quả XSMB & XSMN</p>
                         </div>
                     </div>
                     <section class="card market-card" aria-labelledby="marketTitle">
@@ -167,11 +167,14 @@
                                 <h2 id="lotteryTitle">🎟️ Kết quả Xổ số kiến thiết</h2>
                                 <small class="small-muted" id="lotteryUpdated">Cập nhật trực tiếp hằng ngày</small>
                             </div>
-                            <button class="soft-btn mini-btn" type="button" onclick="refreshCurrentLottery()" aria-label="Làm mới">🔄 Cập nhật</button>
+                            <button class="soft-btn mini-btn" type="button" onclick="refreshCurrentLottery()"
+                                aria-label="Làm mới">🔄 Cập nhật</button>
                         </div>
                         <div class="lottery-tabs">
-                            <button type="button" class="lottery-tab-btn active" id="lotteryTabMB" onclick="switchLotteryRegion('mb')">🌸 Miền Bắc (XSMB)</button>
-                            <button type="button" class="lottery-tab-btn" id="lotteryTabMN" onclick="switchLotteryRegion('mn')">🌴 Miền Nam (XSMN)</button>
+                            <button type="button" class="lottery-tab-btn active" id="lotteryTabMB"
+                                onclick="switchLotteryRegion('mb')">🌸 Miền Bắc (XSMB)</button>
+                            <button type="button" class="lottery-tab-btn" id="lotteryTabMN"
+                                onclick="switchLotteryRegion('mn')">🌴 Miền Nam (XSMN)</button>
                         </div>
                         <div id="lotteryPanelMB">
                             <div id="lotteryContent">
@@ -182,11 +185,13 @@
                             <div class="lottery-mn-filters">
                                 <div class="field">
                                     <label for="lotteryMnDate">📅 Chọn ngày xổ</label>
-                                    <input type="date" id="lotteryMnDate" class="filter-select" onchange="onLotteryMnDateChange()">
+                                    <input type="date" id="lotteryMnDate" class="filter-select"
+                                        onchange="onLotteryMnDateChange()">
                                 </div>
                                 <div class="field">
                                     <label for="lotteryMnStation">📍 Chọn đài / Tỉnh</label>
-                                    <select id="lotteryMnStation" class="filter-select" onchange="onLotteryMnStationChange()"></select>
+                                    <select id="lotteryMnStation" class="filter-select"
+                                        onchange="onLotteryMnStationChange()"></select>
                                 </div>
                             </div>
                             <div class="lottery-mn-stations-today" id="lotteryMnTodayStations"></div>
